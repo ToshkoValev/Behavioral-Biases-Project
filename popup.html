@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meeting Bias Analyzer</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 8px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #ccc;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .recording {
+      background-color: #fee2e2;
+      color: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input-group">
+      <label for="meetingLink">Zoom Meeting Link/ID:</label>
+      <input type="text" id="meetingLink" placeholder="Enter meeting link or ID">
+    </div>
+    <button id="startBtn">Start Recording</button>
+    <div id="status" class="status">Recording in progress...</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
